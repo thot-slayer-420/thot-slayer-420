@@ -4,9 +4,10 @@
 
 void alphabet()
 {
-	for (char i = 65; i <= 90; ++i)
+	char i = 65;
+	for (; i <= 90; ++i)
 	{
-		printf("%c %c", i, i + 32);
+		printf("%c %c \r\n", i, i + 32);
 	}
 }
 
