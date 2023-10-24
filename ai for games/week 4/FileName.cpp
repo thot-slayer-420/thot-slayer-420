@@ -9,7 +9,7 @@ private:
 	int array[10];
 
 public: 
-	search_array() { read(); bubble(); }
+	search_array() { read(); }
 
 	void read()
 	{
@@ -59,13 +59,67 @@ public:
 		// shows the result of the sort
 		print();
 	}
+
+	int linear(int n)
+	{
+		bool found = false;
+		for (int i = 0; i < 10; ++i)
+		{
+			if (array[i] == n)
+			{
+				found = true;
+				cout << "The number was found position " << i << "with " << i << "steps\n";
+				return n;
+			}
+		}
+		if (!found)
+		{
+			return 0;
+		}
+	}
+
+	int binary(int n)
+	{
+		bubble();
+		cout << "The array has been sorted before searching\n";
+
+			
+		int min = 0;
+		int mid = 4;
+		int max = 9;
+		bool found = false;
+		int steps = 0;
+		while (!found)
+		{
+			++steps;
+			if (array[mid] == n || array[min] == n || array[max] == n)
+			{
+				cout << "the number was found in " << steps << " steps\n";
+				return n;
+			}
+			else if (mid == max || mid == min)
+			{
+				return 0;
+			}
+			else if (n < array[mid])
+			{
+				max = mid;
+				mid = (min + max) / 2;
+			}
+			else
+			{
+				min = mid;
+				mid = (min + max) / 2;
+			}
+		}
+	}
 };
 
 
 int main() {
 
 	search_array my_array;
-
+	int output = my_array.binary(6);
 
 
 	return 0;
