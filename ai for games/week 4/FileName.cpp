@@ -9,7 +9,7 @@ private:
 	int array[10];
 
 public: 
-	search_array() { read(); }
+	search_array() { read(); bubble(); }
 
 	void read()
 	{
@@ -48,18 +48,23 @@ public:
 				}
 			}
 			items_need_sorting--;
+
+			//exits the while loop if no changes were made during a loop through the list
 			if (!items_swapped)
 			{
 				sorted = true;
 			}
 		}
+
+		// shows the result of the sort
+		print();
 	}
 };
 
 
 int main() {
 
-
+	search_array my_array;
 
 
 
