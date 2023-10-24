@@ -31,8 +31,18 @@ int main(void)
 	int i = 0;
 	for (; i < 5; ++i)
 	{
-		printf("Give a character");
+		printf("Give a character ");
 		c = getchar();
+		while(getchar() != '\n');
+
+		printf("%c is a ", c);
+		if (isdigit(c)) { printf("number"); }
+		else if (ispunct(c)) { printf("punctuation"); }
+		else if (isspace(c)) { printf("space"); }
+		else if (isalpha(c)) { printf("letter"); }
+		else if (!isblank(c)) { printf("something"); }
+		else { printf("nothing"); }
+		printf("\r\n");
 	}
 	return 0;
 }
