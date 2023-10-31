@@ -21,7 +21,7 @@ void challenge_task()
 	int want_to_exit = 0;
 	while (!want_to_exit)
 	{
-		printf("Give me the target agnle of the servo between -90.0 and 90.0: ");
+		printf("Give me the target angle of the servo between -90.0 and 90.0: ");
 		user_input = getchar();
 		printf("%c", user_input);
 		clear_buffer(user_input);
@@ -30,22 +30,22 @@ void challenge_task()
 		printf("\n\rDo you want to exit?");
 		do {
 			user_input = getchar();
-			printf("%d", user_input);
+			printf("%c\r\n", user_input);
 			clear_buffer(user_input);
-			switch (user_input)
+			switch (toupper(user_input))
 			{
-			case 89 | 121:
+			case 'Y':
 				want_to_exit = 1;
 				valid_input = 1;
 				break;
-			case 78 | 110:
+			case 'N':
 				valid_input = 1;
 				break;
 			default:
 				printf("Invalid input%c",10);
 				break;
 			}
-		} while (valid_input = 0);
+		} while (valid_input == 0);
 
 	}
 }
