@@ -12,8 +12,10 @@ public:
     void add_edge(node& parent, node& child) { parent.add_edge(child); cout << "Parent node, " << parent.get_id() << ", has child node, " << child.get_id() << endl; }
     node get_node(int search_id) {
         for (int i = 0; i < nodes.size(); ++i) {
-            if (search_id == nodes[i].get_id()) { }
+            if (search_id == nodes[i].get_id()) { cout << "node " << search_id << " returned" << endl; return nodes[i]; }
         }
+        cout << "Node " << search_id << " not found" << endl;
+        return 0;
     }
 private:
     vector<node> nodes;
@@ -23,19 +25,24 @@ class node
 {
 public:
     node(int new_id) { id = new_id; }
+    node(int new_id, int new_depth) { id = new_id; depth = new_depth; }
 
     void add_edge(node& edge) { edges.push_back(edge); }
     int get_id() { cout<< "Node: "<< id << " returned" << endl; return id; }
+    void set_id(int new_id) { id = new_id; }
     
 
 private:
     vector<node> edges;
     int id;
+    int depth;
+
+   
 };
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    cout << "Hello World!\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
