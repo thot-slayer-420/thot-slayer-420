@@ -43,7 +43,9 @@ private:
 
 int main()
 {
-    cout << "Hello World!\n";
+    graph x;
+    x.add_node(0);
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
