@@ -28,9 +28,9 @@ public:
     node(int new_id) { id = new_id; }
     node(int new_id, int new_depth) { id = new_id; depth = new_depth; }
 
-    void add_edge(node& edge) { edges.push_back(edge); }
+    void add_edge(node& edge) { edges.push_back(edge); cout << "pointer from node " << id << " to " << edge.get_id() << " added" << endl; }
     int get_id() { cout<< "Node: "<< id << " returned" << endl; return id; }
-    void set_id(int new_id) { id = new_id; }
+    void set_id(int new_id) { id = new_id; cout << "id " << id << "set" << endl; }
     
 
 private:
