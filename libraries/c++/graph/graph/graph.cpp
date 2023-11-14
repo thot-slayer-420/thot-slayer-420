@@ -9,6 +9,7 @@ class graph
 public:
     graph() { cout << "Graph created" << endl; }
     void add_node(int id) { node new_node(id); nodes.push_back(new_node); cout << "Node " << id << "is created into the graph." << endl; }
+    void add_node(int id, int depth) { node new_node(id, depth); nodes.push_back(new_node); cout << "Node " << id << " is created at depth " << depth << endl; }
     void add_edge(node& parent, node& child) { parent.add_edge(child); cout << "Parent node, " << parent.get_id() << ", has child node, " << child.get_id() << endl; }
     node get_node(int search_id) {
         for (int i = 0; i < nodes.size(); ++i) {
