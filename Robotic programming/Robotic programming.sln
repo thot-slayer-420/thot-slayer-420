@@ -5,6 +5,8 @@ VisualStudioVersion = 17.6.33717.318
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Week 5", "Week 5\Week 5.vcxproj", "{9648A92B-7018-4C5B-9909-3046922E70E9}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "week 10 - file handling", "week 10 - file handling\week 10 - file handling.vcxproj", "{56BF4C94-D331-4C9E-953A-187FC89FF242}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{9648A92B-7018-4C5B-9909-3046922E70E9}.Release|x64.Build.0 = Release|x64
 		{9648A92B-7018-4C5B-9909-3046922E70E9}.Release|x86.ActiveCfg = Release|Win32
 		{9648A92B-7018-4C5B-9909-3046922E70E9}.Release|x86.Build.0 = Release|Win32
+		{56BF4C94-D331-4C9E-953A-187FC89FF242}.Debug|x64.ActiveCfg = Debug|x64
+		{56BF4C94-D331-4C9E-953A-187FC89FF242}.Debug|x64.Build.0 = Debug|x64
+		{56BF4C94-D331-4C9E-953A-187FC89FF242}.Debug|x86.ActiveCfg = Debug|Win32
+		{56BF4C94-D331-4C9E-953A-187FC89FF242}.Debug|x86.Build.0 = Debug|Win32
+		{56BF4C94-D331-4C9E-953A-187FC89FF242}.Release|x64.ActiveCfg = Release|x64
+		{56BF4C94-D331-4C9E-953A-187FC89FF242}.Release|x64.Build.0 = Release|x64
+		{56BF4C94-D331-4C9E-953A-187FC89FF242}.Release|x86.ActiveCfg = Release|Win32
+		{56BF4C94-D331-4C9E-953A-187FC89FF242}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
