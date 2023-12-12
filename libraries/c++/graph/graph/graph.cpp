@@ -7,7 +7,7 @@ namespace graph_lib {
     class node
     {
     public:
-        node(int new_id) { id = new_id; }
+        node(int new_id) { id = new_id; depth = -1; }
         node(int new_id, int new_depth) { id = new_id; depth = new_depth; }
 
         void add_edge(node& edge) { edges.push_back(edge); cout << "pointer from node " << id << " to " << edge.get_id() << " added" << endl; }
